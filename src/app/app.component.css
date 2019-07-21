@@ -1,11 +1,11 @@
-html{
+html {
   height: 100%;
 }
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height:100%;
+  height: 100%;
   background-color: #fafafa;
 }
 
@@ -16,66 +16,231 @@ body{
 .timer-background.break {
   background-color: #e5f3ff;
 }
-.menu{
+.menu {
   background-color: #003164;
 }
-.white-font{
-  color:white;
+.white-font {
+  color: white;
+}
+.blue-text{
+  color: #003164;
+}
+.pink-text{
+  color:#ff4384;
 }
 
-
+/*font*/
+.roboto{
+  font-family: "Roboto";
+}
+.upper{
+  text-transform: uppercase;
+}
+.font-size-24px{
+  font-size:24px;
+}
+.bold{
+  font-weight: bold;
+}
+.font-size-16px{
+  font-size:16px;
+}
+.font-align-right{
+  text-align: right;
+}
 /*layout*/
-.container{
-  width:100%;
-  height:100vh;
+.container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.poromodo{
+.poromodo {
   width: 1280px;
   height: 800px;
-  margin:auto;
+  margin: auto;
 }
-.menu{
-  width:450px;
-  height:800px;
-  margin-right:0;
+.menu {
+  width: 450px;
+  height: 800px;
+  margin-right: 0;
   margin-left: auto;
 }
-.menuButton{
-  margin-right:85px;
+.menuButton {
+  margin-right: 85px;
   margin-left: auto;
-  width:36px;
+  width: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-.white-icon{
-  color:white;
+.white-icon {
+  color: white;
 }
-.menu-button{
-  width:36px;
-  height:36px;
-  margin-top:48px;
+.menu-button {
+  width: 36px;
+  height: 36px;
+  margin-top: 48px;
   font-size: 36px;
 }
-.menu-button:hover{
+.menu-button:hover {
   cursor: pointer;
 }
-.menu-title{
+.menu-title {
   font-weight: bold;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 24px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  margin-top:auto;
-  margin-bottom:48px;
+  margin-top: auto;
+  margin-bottom: 48px;
 }
-.mission{
-  margin-top:48px;
+.mission {
+  margin-top: 48px;
   margin-left: 48px;
+  width: 445px;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.new-mission {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ff4384;
+  background-color: white;
+  width: 100%;
+}
+.new-mission .btnAdd {
+  margin: 16px 16px 16px auto;
+  cursor: pointer;
+  line-height: inherit;
+  min-width: inherit;
+  padding: inherit;
+}
+.new-mission input,
+.new-mission ::placeholder {
+  border: none;
+  width: 100%;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  color: #ff4384;
+  text-transform: uppercase;
+}
+.now-mission {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top:145px;
+  justify-content: flex-start;
+}
+.now-mission-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.div-now-mission-checkbox{
+  margin-right: 16px;
+}
+/deep/ .now-mission-checkbox .mat-checkbox-frame,
+/deep/ .now-mission-checkbox .mat-checkbox-background,
+/deep/ .other-mission-checkbox .mat-checkbox-frame,
+/deep/ .other-mission-checkbox .mat-checkbox-background{
+  border-radius: 50%!important;
+  color: #003164;
+}
+/deep/ .now-mission-checkbox .mat-checkbox-inner-container{
+  width:48px;
+  height:48px;
+}
+/deep/ .other-mission-checkbox .mat-checkbox-inner-container{
+  width:24px;
+  height:24px;
+}
+.now-mission-timer{
+  display: flex;
+  align-items: center;
+  font-size: 176px;
+  color: #ff4384;
+  font-weight: bold;
+  font-family: "Roboto";
+}
+.other-missions{
+  margin-top:110px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+}
+.other-mission{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex:0 0 100%;
+  border-bottom: 1px solid #00316433;
+  padding:10px 0;
+}
+.div-other-mission-checkbox{
+  margin-right: 4px;
+  flex:1;
+  flex-grow: 0;
+}
+.mission-playbutton{
+  margin-left:auto;
+  margin-right: 0;
+  flex:1;
+  flex-grow: 0;
+
+}
+.other-mission-title{
+  flex:1;
+  flex-grow: 2;
+}
+.more-mission{
+margin:9px 0;
+}
+.play-button{
+  margin-top: 130px;
+  margin-bottom: 130px;
+  margin-left: 560px;
+  margin-right: 180px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.progressbar-circle{
+  transition: 0.35s stroke-dashoffset;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.timer-play-btn{
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  align-self: center;
+  align-items: center;
+  left: 40%;
+  top: 40%;
+  background: white;
+  border-radius: 50%;
+  width:94px;
+  height:94px;
+  justify-content: center;
+}
+.timer-play-btn .mat-icon{
+  width:72px;
+  height:72px;
+  font-size: 72px;
+}
+.timer-stop-btn{
+  position: absolute;
+  top: 294px;
+  left: 318px;
 }

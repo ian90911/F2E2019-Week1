@@ -1,7 +1,117 @@
 <div class="container">
   <div class="poromodo timer-background timer">
     <div class="mission">
-      <input type="text" class="inputMission" />
+      <div class="new-mission">
+        <input
+          type="text"
+          class="inputMission"
+          placeholder="add a new mission…"
+        />
+        <button mat-button class="btnAdd">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <div class="now-mission">
+        <div class="now-mission-info">
+          <div class="div-now-mission-checkbox">
+            <mat-checkbox class="now-mission-checkbox"></mat-checkbox>
+          </div>
+          <div>
+            <label
+              class="mission-title roboto upper font-size-24px bold blue-text"
+              >the First thing to do today</label
+            >
+            <div class="mission-total-time">
+              ○○○○○
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="now-mission-timer">
+        25:00
+      </div>
+      <div class="other-missions">
+        <div class="other-mission">
+          <div class="div-other-mission-checkbox">
+            <mat-checkbox class="other-mission-checkbox"></mat-checkbox>
+          </div>
+          <label
+            class="mission-title roboto upper font-size-16px bold blue-text other-mission-title"
+            >the SECOND thing to do today
+          </label>
+          <mat-icon class="mission-playbutton blue-text"
+            >play_circle_outline</mat-icon
+          >
+        </div>
+        <div class="other-mission">
+          <div class="div-other-mission-checkbox">
+            <mat-checkbox class="other-mission-checkbox"></mat-checkbox>
+          </div>
+          <label
+            class="mission-title roboto upper font-size-16px bold blue-text other-mission-title"
+            >the THIRD thing to do today
+          </label>
+          <mat-icon class="mission-playbutton blue-text"
+            >play_circle_outline</mat-icon
+          >
+        </div>
+        <div class="other-mission">
+          <div class="div-other-mission-checkbox">
+            <mat-checkbox class="other-mission-checkbox"></mat-checkbox>
+          </div>
+          <label
+            class="mission-title roboto upper font-size-16px bold blue-text other-mission-title"
+            >the FOURTH thing to do today
+          </label>
+          <mat-icon class="mission-playbutton blue-text"
+            >play_circle_outline</mat-icon
+          >
+        </div>
+        <div
+          class="more-mission pink-text font-align-right roboto bold upper font-size-16px"
+        >
+          MORE
+        </div>
+      </div>
+    </div>
+    <div class="play-button">
+      <svg class="progressbar" width="540" height="540">
+         <circle
+          class="timer-out-circle"
+          stroke="#FF4384"
+          stroke-width="3"
+          fill="transparent"
+          r="265"
+          cx="270"
+          cy="270"
+        >
+        </circle>
+        <circle
+          class="progressbar-circle"
+          stroke="#FF4384"
+          stroke-width="20"
+          fill="transparent"
+          r="255"
+          cx="270"
+          cy="270"
+        >
+        </circle>
+        <circle
+        class="timer-in-circle"
+        stroke="#FF4384"
+        stroke-width="3"
+        fill="transparent"
+        r="252"
+        cx="270"
+        cy="270"
+        fill="#FF4384"
+      >
+      </circle>
+      </svg>
+      <div class="timer-play-btn">
+<mat-icon class="pink-text">play_arrow</mat-icon>
+      </div>
+      <div class="timer-stop-btn"><mat-icon class="white-font">stop</mat-icon></div>
     </div>
     <div class="menu">
       <div class="menuButton">
